@@ -1,0 +1,56 @@
+<html>
+<body>
+<canvas id="myCanvas" width="300" height="300" style="border:2px solid #d3d3d3;">
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createLinearGradient(0, 0, 200, 0);
+grd.addColorStop(0, "white");
+grd.addColorStop(0.3,"pink");
+grd.addColorStop(0.5, "white");
+grd.addColorStop(0.7, "pink");
+grd.addColorStop(0.9, "white");
+grd.addColorStop(1, "pink");
+//grd.addColorStop(1, "yellow");
+
+
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 300, 300);
+
+ctx.moveTo(50, 0);
+ctx.lineTo(50, 300);
+ctx.moveTo(0, 50);
+ctx.lineTo(500, 50);
+
+
+ctx.moveTo(100, 0);
+ctx.lineTo(100, 300);
+ctx.moveTo(0, 100);
+ctx.lineTo(500, 100);
+
+ctx.moveTo(150, 0);
+ctx.lineTo(150, 300);
+ctx.moveTo(0, 150);
+ctx.lineTo(500, 150);
+
+ctx.moveTo(200, 0);
+ctx.lineTo(200, 300);
+ctx.moveTo(0, 200);
+ctx.lineTo(500, 200);
+
+ctx.moveTo(250, 0);
+ctx.lineTo(250, 300);
+ctx.moveTo(0, 250);
+ctx.lineTo(500, 250);
+
+ctx.stroke();
+
+ctx.font = "30px Arial";
+ctx.strokeText("Hello World", 70, 60);
+
+</script>
+</body>
+</html>
