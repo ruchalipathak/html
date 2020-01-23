@@ -1,0 +1,21 @@
+<html>
+<body>
+<img id="first" src="Penguins.jpg" alt="show image" width="200" height="100">
+
+<p>canvas</p>
+<canvas id="r2" width="1000" height="800" style="border:3px solid red;">
+</canvas>
+
+<p><button onclick="r2 ( )">Press</button></p>
+
+<script>
+function r2 ( )
+{
+	var c=document.getElementById("r2");
+	var ctx = c.getContext("2d");
+  	var img = document.getElementById("first");
+  	ctx.drawImage(img,10,10);
+}
+</script>
+</body>
+</html>
